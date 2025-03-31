@@ -1,0 +1,42 @@
+[
+  {
+    "firstname": "local",
+    "lastname": "admin",
+    "enabled": true,
+    "password": "!Str0ngP@ssword",
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "locked": false,
+    "username": "11INP0725"
+  },
+  {
+    "firstname": "Kader",
+    "lastname": "KONE",
+    "enabled": true,
+    "password": "mot de passe",
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "locked": false,
+    "username": "24INP0100"
+  },
+  {
+    "firstname": "Maurice",
+    "lastname": "Kouadio",
+    "enabled": true,
+    "password": "mot de passe",
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "locked": false,
+    "username": "24INP0101"
+  },
+  {
+    "firstname": "Zana",
+    "lastname": "Soro",
+    "enabled": true,
+    "password": "mot de passe",
+    "accountExpired": false,
+    "credentialsExpired": false,
+    "locked": false,
+    "username": "24INP0102"
+  }
+]

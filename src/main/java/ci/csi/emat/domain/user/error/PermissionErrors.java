@@ -4,16 +4,15 @@ import ci.csi.emat.common.advice.error.ErrorDetails;
 import lombok.Getter;
 
 @Getter
-public enum UserErrors implements ErrorDetails {
-
-    USER_001("User id not found", "userId");
+public enum PermissionErrors implements ErrorDetails {
+    PEM_001("Permission code not found", "code");
 
     private String errorMessage;
     private String errorField;
 
-    UserErrors(String defaultMessage, String field) {
-        this.errorMessage = defaultMessage;
-        this.errorField = field;
+    PermissionErrors(String errorMessage, String errorField) {
+        this.errorMessage = errorMessage;
+        this.errorField = errorField;
     }
 
     @Override

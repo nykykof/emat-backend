@@ -1,0 +1,28 @@
+[
+  {
+    "code": "exploitant",
+    "label": "Exploitant",
+    "description": "Role pour les exploitants informatique",
+    "permissions": [
+      {
+        "code": "update_user"
+      }
+    ]
+  },
+  {
+    "code": "dsi",
+    "label": "DSI",
+    "description": "Role pour le directeur des Systèmes d'information",
+    "permissions": [
+      {
+        "code": "create_user"
+      },
+      {
+        "code": "list_users"
+      },
+      {
+        "code": "delete_user"
+      }
+    ]
+  }
+]

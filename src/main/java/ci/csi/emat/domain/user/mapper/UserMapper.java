@@ -25,6 +25,7 @@ public class UserMapper {
         userEntity.setUsername(form.getUsername());
         userEntity.setFirstname(form.getFirstname());
         userEntity.setLastname(form.getLastname());
+        userEntity.setPassword(form.getPassword());
         userEntity.setEmail(UserUtils.generateUserEmail(form));
         return userEntity;
     }

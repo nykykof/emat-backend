@@ -4,16 +4,16 @@ import ci.csi.emat.common.advice.error.ErrorDetails;
 import lombok.Getter;
 
 @Getter
-public enum UserErrors implements ErrorDetails {
+public enum RoleErrors implements ErrorDetails {
 
-    USER_001("User id not found", "userId");
+    ROLE_001("Role code not found", "code");
 
     private String errorMessage;
     private String errorField;
 
-    UserErrors(String defaultMessage, String field) {
-        this.errorMessage = defaultMessage;
-        this.errorField = field;
+    RoleErrors(String errorMessage, String errorField) {
+        this.errorMessage = errorMessage;
+        this.errorField = errorField;
     }
 
     @Override

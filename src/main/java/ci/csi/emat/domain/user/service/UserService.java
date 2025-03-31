@@ -1,5 +1,6 @@
 package ci.csi.emat.domain.user.service;
 
+import ci.csi.emat.common.exception.BusinessException;
 import ci.csi.emat.domain.user.dto.UserDTO;
 import ci.csi.emat.domain.user.entity.UserEntity;
 import ci.csi.emat.domain.user.error.exception.UserNotFoundException;
@@ -10,6 +11,7 @@ import ci.csi.emat.domain.user.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,6 +25,16 @@ public class UserService {
     public UserService(UserRepository userRepository, UserMapper userMapper) {
         this.userRepository = userRepository;
         this.userMapper = userMapper;
+    }
+
+    public void updateLastLogin(String userName) throws BusinessException {
+        this.userRepository.findByUsername(userName)
+                .ifPresentOrElse(user -> {
+                    user.setLastLogin(Instant.now());
+                    this.userRepository.save(user);
+                    log.info("User {} last login updated", userName);
+                }, () -> log.warn("User {} not found", userName));
+
     }
 
     public boolean existsByUsername(String username) {

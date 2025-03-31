@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 
 import java.util.Objects;
 
+import static ci.csi.emat.common.exception.DefaultErrorDetails.DEFAULT_000;
+
 @Getter
 @Setter
 public class BusinessException extends RuntimeException {
@@ -17,7 +19,7 @@ public class BusinessException extends RuntimeException {
     private HttpStatus httpStatus;
 
     public BusinessException() {
-        super();
+        throw new BusinessException(DEFAULT_000, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
     public BusinessException(ErrorDetails errorDetails) {

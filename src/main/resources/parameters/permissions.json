@@ -1,0 +1,18 @@
+[
+  {
+    "code": "create_user",
+    "label": "Création d'utilisateur"
+  },
+  {
+    "code": "delete_user",
+    "label": "Suppression d'utilisateur"
+  },
+  {
+    "code": "list_users",
+    "label": "Lister tous les utilisateurs"
+  },
+  {
+    "code": "update_user",
+    "label": "Mettre à jour un utilisateurs"
+  }
+]
